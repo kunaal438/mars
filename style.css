@@ -11,3 +11,35 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.weather-parent{
+    width: 50vw;
+    min-width: 300px;
+    height: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.card p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card h2{
+    font-size: 50px;
+    font-weight: lighter;
+    margin: 10px 0;
+}
