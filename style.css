@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 10px;
+}
+
 body{
     /* min-width: 100vw; */
     min-height: 100vh;
@@ -13,13 +17,13 @@ body{
 }
 
 .weather-parent{
-    width: 50vw;
-    min-width: 300px;
+    width: 60rem;
     height: auto;
-    padding: 20px;
+    padding: 2rem;
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
+    grid-gap: 2rem;
     user-select: none;
     position: absolute;
     top: 50%;
@@ -28,19 +32,51 @@ body{
 
 .card{
     background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 1rem;
     color: #fff;
     font-family: sans-serif;
     min-width: 200px;
 }
 
 .card p{
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
 }
 
 .card h2{
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: lighter;
-    margin: 10px 0;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 700px){
+    .weather-parent{
+        width: auto;
+        padding: 20px 40px;
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 511px){
+    body{
+        background-position: center center;
+    }
+    .weather-parent{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (min-width: 2560px){
+    html{
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (min-width: 1850px){
+    html{
+        font-size: 16px !important;
+    }
 }
