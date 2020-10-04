@@ -14,10 +14,11 @@ body{
     background-image: url(bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .weather-parent{
-    width: 60rem;
     height: auto;
     padding: 2rem;
     margin-top: 1rem;
@@ -25,9 +26,25 @@ body{
     grid-template-columns: repeat(3,1fr);
     grid-gap: 2rem;
     user-select: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+}
+
+.right-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-content img{
+    width: 300px;
+}
+
+.right-content h2{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    letter-spacing: 3px;
 }
 
 .card{
@@ -49,7 +66,24 @@ body{
     margin: 1rem 0;
 }
 
+@media screen and (max-width: 998px){
+    body{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .right-content{
+        grid-row: 1;
+        margin: 30px 0;
+    }
+}
+
 @media screen and (max-width: 700px){
+    body{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .right-content{
+        grid-row: 1;
+        margin: 30px 0;
+    }
     .weather-parent{
         width: auto;
         padding: 20px 40px;
